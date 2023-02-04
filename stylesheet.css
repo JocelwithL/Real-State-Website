@@ -1,3 +1,7 @@
+body {
+    height:200vh;
+}
+
 .container {
     height: 600px;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images/hero-bg.png);
@@ -75,6 +79,7 @@ nav ul li a {
     height: 80%;
     align-items: center;
     margin-left: 8%;
+    margin-right: 8%;
     /* border: 1px solid cyan; */
 }
 
@@ -111,7 +116,7 @@ nav ul li a {
 }
 
 
-@media (max-width:900px) {
+@media (max-width:899px) {
 
     .toggle-button {
         display: flex;
@@ -121,13 +126,15 @@ nav ul li a {
         align-items: flex-start;
         flex-direction: column;
         display: flex;
-        /* border: 1px solid red; */
+        /* border: 1px solid blue; */
     }
 
     .navbar-links {
         width: 100%;
         /* border: 1px solid blue; */
         display:none;
+        background-color: rgba(0, 0, 0, 0.952);
+        z-index: 1;
     }
 
     .navbar-links.active {
@@ -136,7 +143,7 @@ nav ul li a {
 
     .navbar-links ul {
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         flex-direction: column;
         margin-top: 0px;
         /* border: 1px solid pink; */
@@ -146,13 +153,39 @@ nav ul li a {
         text-align: center;
         margin-right: 20px;
     }
-
-
-
     
 }
 
+@media (max-width: 520px) {
 
+    .row {
+        /* border: 1px solid red; */
+        display: block;
+        margin-right: 10%;
+    }
+
+    .row .row2 {
+        display: none;
+    }
+    
+    .row .col h1 {
+        color: rgb(255, 255, 255);
+        font-size:40px;
+        /* border: 1px solid red; */
+        margin-top: 90px 
+    }
+    
+    .row .col p {
+        color: white;
+        font-size: 15px;
+        /* border: 1px solid blue; */
+    }
+    
+    .welcome-button {
+        width: 150px;
+    }
+    
+}
 
 
 
