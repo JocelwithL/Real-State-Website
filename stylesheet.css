@@ -5,6 +5,7 @@ body {
 h1 {
     font-family: 'DM Serif Display', serif;
     font-weight: 500;
+    line-height: 45px;
 }
 
 h5 {
@@ -14,11 +15,12 @@ h5 {
 
 p {
     font-family: 'Poppins', sans-serif;
-    font-weight: 200;
+    font-weight: 300;
+    line-height: 20px;
 }
 
 .container {
-    height: 700px;
+    min-height: 700px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.692),rgba(0, 0, 0, 0.603)), url(images/hero-bg.png);
     background-position: center;
     background-size: cover;
@@ -88,15 +90,12 @@ nav ul li a {
     color: white;
     font-size: 15px;
     font-family: 'Poppins', sans-serif;
-    font-weight: 200;
+    font-weight: 500;
 }
 
 .row {
     display: flex;
-    height: 80%;
-    align-items: center;
-    margin-left: 8%;
-    margin-right: 8%;
+    padding: 5% 8%;
     /* border: 1px solid cyan; */
 }
 
@@ -160,7 +159,7 @@ nav ul li a {
     padding-top: 30px;
 }
 
-.house-content-container p {
+.house-content-container .houses-descrip {
     text-align: center;
     padding: 0px 20% 0px 20%;
 }
@@ -175,7 +174,7 @@ nav ul li a {
     height: 330px;
     /* border: 1px solid red; */
     border-radius: 10px;
-    padding: 15px 25px;
+    padding:15px 5px 0px 5px;
     box-sizing: border-box;
     cursor: pointer;
     margin: 10px 15px;
@@ -185,33 +184,49 @@ nav ul li a {
 }
 
 .card1 {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.589),rgba(0, 0, 0, 0)), url(images/house1.jpg);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.5)), url(images/house1.jpg);
 }
 .card2 {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.589),rgba(0, 0, 0, 0)), url(images/house2.jpg);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.5)), url(images/house2.jpg);
 }
 .card3 {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.589),rgba(0, 0, 0, 0)), url(images/house3.jpg);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.5)), url(images/house3.jpg);
 }
 .card4 {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.589),rgba(0, 0, 0, 0)), url(images/house4.jpg);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.5)), url(images/house4.jpg);
 }
 
 .card:hover {
     transform:translateY(-10px)
 }
 
-.card h5 {
+.card-container .card h5 {
     color: rgb(255, 255, 255);
-    text-align: center;
+    padding: 10px 0px 0px 10px ;
     margin-top: 0px;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 20px;
     text-shadow: 0 0 5px black;
+    margin-bottom: 0px;
 }
 
+.card-container .card p {
+    color: white;
+    padding: 0px 10px 0px 10px;
+    font-size: 14px;
+}
 
 @media (max-width:899px) {
+
+
+    .col1 {
+        flex: 2;
+        /* border: 1px solid pink; */
+    }
+
+    .col2 {
+        flex:1;
+    }
 
     .toggle-button {
         display: flex;
@@ -287,21 +302,22 @@ nav ul li a {
 
 @media (max-width: 520px) {
 
+   .container {
+    min-height: 600px;
+   }
+
     .row {
         /* border: 1px solid red; */
         display: block;
-        margin-right: 10%;
     }
 
-    .row .row2 {
-        display: none;
-    }
+
+
     
     .row .col h1 {
         color: rgb(255, 255, 255);
         font-size:40px;
         /* border: 1px solid red; */
-        margin-top: 90px 
     }
     
     .row .col p {
@@ -332,7 +348,7 @@ nav ul li a {
         font-size: 27px;
     }
     
-    .house-content-container p {
+    .house-content-container .houses-descrip {
         text-align: center;
         padding: 0px 5% 20px 5%;
 
