@@ -2,9 +2,24 @@ body {
     height:200vh;
 }
 
+h1 {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 500;
+}
+
+h5 {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 300;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+
 .container {
-    height: 600px;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images/hero-bg.png);
+    height: 700px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.692),rgba(0, 0, 0, 0.603)), url(images/hero-bg.png);
     background-position: center;
     background-size: cover;
 
@@ -72,6 +87,8 @@ nav ul li a {
     text-decoration: none;
     color: white;
     font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
 }
 
 .row {
@@ -88,18 +105,29 @@ nav ul li a {
     /* border: 1px solid pink; */
 }
 
-.row .col h1 {
+.row .col1 h1 {
     color: white;
     font-size:50px;
     /* border: 1px solid red; */
     margin-bottom: 0px;
 }
 
-.row .col p {
+.row .col1 p {
     color: white;
     font-size: 15px;
     /* border: 1px solid blue; */
 }
+
+.col2 {
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
 
 .welcome-button {
     width: 180px;
@@ -113,6 +141,73 @@ nav ul li a {
     margin-top: 0px;
 
 
+}
+
+.house-content-container {
+    height: auto;
+    background-color: rgb(226, 226, 226);
+    background-position: center;
+    background-size: cover;
+    /* border: 1px solid red; */
+    margin-top: 0px;
+    padding-bottom: 60px;
+
+}
+
+.house-title {
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 30px;
+}
+
+.house-content-container p {
+    text-align: center;
+    padding: 0px 20% 0px 20%;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    height: 330px;
+    /* border: 1px solid red; */
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    transition: .4s;
+}
+
+.card1 {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.589),rgba(0, 0, 0, 0)), url(images/house1.jpg);
+}
+.card2 {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.589),rgba(0, 0, 0, 0)), url(images/house2.jpg);
+}
+.card3 {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.589),rgba(0, 0, 0, 0)), url(images/house3.jpg);
+}
+.card4 {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.589),rgba(0, 0, 0, 0)), url(images/house4.jpg);
+}
+
+.card:hover {
+    transform:translateY(-10px)
+}
+
+.card h5 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 0px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-shadow: 0 0 5px black;
 }
 
 
@@ -133,7 +228,7 @@ nav ul li a {
         width: 100%;
         /* border: 1px solid blue; */
         display:none;
-        background-color: rgba(0, 0, 0, 0.952);
+        background-color: #192d47f3;
         z-index: 1;
     }
 
@@ -153,7 +248,41 @@ nav ul li a {
         text-align: center;
         margin-right: 20px;
     }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(2,300px);
+        grid-auto-rows: 330px;
+        grid-gap: 20px;
+        /* border: 1px solid rebeccapurple; */
+    }
     
+    .card {
+        width: 300px;
+        height: 330px;
+        /* border: 1px solid red; */
+        border-radius: 10px;
+        box-sizing: border-box;
+        cursor: pointer;
+        margin:0px;
+        background-position: center;
+        background-size: cover;
+        transition: .4s;
+    }
+    
+}
+
+@media(max-width: 700px) {
+    .card {
+        width: 220px;
+        height: 250px;
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(2,220px);
+        grid-auto-rows: 250px;
+    }
 }
 
 @media (max-width: 520px) {
@@ -183,6 +312,30 @@ nav ul li a {
     
     .welcome-button {
         width: 150px;
+    }
+
+    .card {
+        width: 250px;
+        height: 250px;
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(1,250px);
+        grid-auto-rows: 250px;
+    }
+
+    .house-title {
+        text-align: center;
+        margin-top: 0px;
+        padding-top: 30px;
+        font-size: 27px;
+    }
+    
+    .house-content-container p {
+        text-align: center;
+        padding: 0px 5% 20px 5%;
+
     }
     
 }
