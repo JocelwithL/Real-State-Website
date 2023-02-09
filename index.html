@@ -7,14 +7,20 @@
     <link rel="stylesheet" href="stylesheet.css">
     <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@200;300;400;700&display=swap" rel="stylesheet">
-    <title>Real State Broker</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@200;300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/165fb642f9.js" crossorigin="anonymous"></script>
+    <title>Real State Website</title>
 </head>
 <body>
-    <div class="container">
+
+    <div class="page-up-btn">
+        <a href="#home-page"><span class="fas fa-angle-up"></span></a>
+    </div>
+
+    <div class="container" id="home-page">
         <nav class="navbar">
-            <h2 class="logo">MC Property</h2>
+            <h2 class="logo"> <a href="#home-page"> MC Property </a></h2>
             <a href="#" class="toggle-button">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -22,10 +28,10 @@
             </a>
             <div class="navbar-links">
                 <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="">PROPERTIES</a></li>
-                    <li><a href="">ABOUT</a></li>
-                    <li><a href="">CONTACT</a></li>
+                    <li><a href="#home-page">HOME</a></li>
+                    <li><a href="#properties-page">PROPERTIES</a></li>
+                    <li><a href="#about-page">ABOUT</a></li>
+                    <li><a href="#contact-page">CONTACT</a></li>
                 </ul>
             </div>
             <!-- <img src="images/menu-icon.png" class="menu-icon"> -->
@@ -46,7 +52,7 @@
 
     
 
-    <div class="house-content-container">
+    <div class="house-content-container" id="properties-page">
         <h1 class="house-title">Check out these properties.</h1>
         <p class="houses-descrip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur laborum quis neque, rem soluta, nulla, deleniti ratione architecto ipsam necessitatibus sint? Facilis, eos. Veritatis, fuga voluptates. Corporis fuga nobis repellat!</p>
         <div class="card-container">
@@ -85,16 +91,19 @@
         </div>
     </div>
 
-    <div class="about-page-container">
+    <div class="about-page-container" id="about-page">
     <div class="fixed-about-con">
-        <div class="about-content about-description">
+        <div class="about-content">
             <h2>About Us</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos aspernatur et quisquam, corporis autem tenetur labore aliquam voluptas quibusdam pariatur reiciendis veritatis beatae doloremque consequuntur nostrum, sit cupiditate sequi consequatur laboriosam dolorem iusto at recusandae sapiente minima. Maiores, beatae non?</p>
+            <br>
+            <h2>Something more about us</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus dolore perferendis sequi architecto quo quam impedit magni saepe ipsa facere vel at ipsum minima atque quia accusamus culpa nihil officiis, repellendus voluptas deleniti. Nesciunt cumque illo consectetur ipsa sint officiis nisi deleniti voluptate? Obcaecati repellendus veritatis natus ut fugit officiis!</p>
         </div>
     </div>
     </div>
 
-    <div class="contact-container">
+    <div class="contact-container" id="contact-page">
         <div class="contact-box">
             <div class="contact-left"></div>
             <div class="contact-right">
@@ -108,6 +117,9 @@
         </div>
     </div>
 
+    <div class="footer">
+        <h4>Created and designed by: Jocel Relles</h4>
+    </div>
 
 </body>
 </html>
